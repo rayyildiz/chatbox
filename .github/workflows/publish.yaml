@@ -47,11 +47,10 @@ jobs:
 #        with:
 #          name: chatbox-${{matrix.target}}
 #          path: dist
-
-      - shell: bash
-        run: |
-          ls -allh dist/
-          tree dist/
+#      - shell: bash
+#        run: |
+#          ls -allh dist/
+#          tree dist/
 
       - name: Build archive
         shell: bash
