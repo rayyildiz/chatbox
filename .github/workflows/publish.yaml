@@ -1,0 +1,49 @@
+name: Publish
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  build:
+    name: Build and publish
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+
+    strategy:
+      matrix:
+        include:
+          - build: linux
+            os: ubuntu-latest
+            target: ubuntu
+
+          - build: macos-x64
+            os: macOS-14
+            target: macos-x64
+
+          - build: macos-arm
+            os: macOS-14-arm64
+            target: macos-arm
+
+          - build: windows-msvc
+            os: windows-latest
+            target: windows-x64
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+
+      - run: uv sync
+
+      - run: uv run installer.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chatbox-{{matrix.target}}
+          path: dist/*
