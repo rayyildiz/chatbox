@@ -48,11 +48,16 @@ jobs:
 #          name: chatbox-${{matrix.target}}
 #          path: dist
 
+      - shell: bash
+        run: |
+          ls -allh dist/
+          tree dist/
+
       - name: Build archive
         shell: bash
         run: |
           # Replace with the name of your binary
-          binary_name="chatbox"
+          binary_name="app"
 
           dirname="$binary_name-${{ env.VERSION }}-${{ matrix.target }}"
           mkdir "$dirname"
