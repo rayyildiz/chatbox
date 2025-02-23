@@ -6,6 +6,7 @@ PyInstaller.__main__.run([
     '--onefile',
     '--windowed',
     '--icon=./app_icon.ico',
+    '--add-data=./app_icon.ico:.',
     '--collect-data=gradio',
     '--collect-data=gradio_client',
     '--additional-hooks-dir=./hooks',
