@@ -14,6 +14,9 @@ jobs:
     name: Publish
     runs-on: ${{ matrix.os }}
     timeout-minutes: 10
+    concurrency:
+      cancel-in-progress: false
+      group: ci-${{ github.ref }}
 
     strategy:
       matrix:
@@ -60,10 +63,13 @@ jobs:
 
           dirname="$binary_name-${{ env.VERSION }}-${{ matrix.target }}"
           mkdir "$dirname"
+
           if [ "${{ matrix.os }}" = "windows-latest" ]; then
-            mv "target/${{ matrix.target }}/release/$binary_name.exe" "$dirname"
+            mv "dist/$binary_name.exe" "$dirname"
+          elif [[ "${{ matrix.os }}" == "macOS-14" || "${{ matrix.os }}" == "macOS-14-arm64" ]]; then
+            mv "dist/$binary_name.app" "$dirname"
           else
-            mv "target/${{ matrix.target }}/release/$binary_name" "$dirname"
+            mv "dist/$binary_name" "$dirname"
           fi
 
           if [ "${{ matrix.os }}" = "windows-latest" ]; then
