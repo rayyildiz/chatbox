@@ -1,5 +1,9 @@
 # ChatBox
 
+[![Build](https://github.com/rayyildiz/chatbox/actions/workflows/build.yaml/badge.svg)](https://github.com/rayyildiz/chatbox/actions/workflows/build.yaml)
+[![Publish](https://github.com/rayyildiz/chatbox/actions/workflows/publish.yaml/badge.svg)](https://github.com/rayyildiz/chatbox/actions/workflows/publish.yaml)
+
+
 ![ChatBox](docs/chatbox.png)
 
 A simple desktop application that provides a user-friendly interface for interacting with OpenAI's chat models like GPT-4o.
@@ -24,7 +28,7 @@ A simple desktop application that provides a user-friendly interface for interac
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/chatbox.git
+   git clone https://github.com/rayyildiz/chatbox.git
    cd chatbox
    ```
 
