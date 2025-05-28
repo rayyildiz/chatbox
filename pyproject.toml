@@ -1,7 +1,7 @@
 [project]
 name = "local-chatbox"
 version = "0.1.0"
-description = "Add your description here"
+description = "Local Chatbox"
 requires-python = ">=3.12"
 dependencies = [
     "cffi>=1.17.1",
