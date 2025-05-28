@@ -14,9 +14,9 @@ jobs:
     name: Publish
     runs-on: ${{ matrix.os }}
     timeout-minutes: 10
-    concurrency:
-      cancel-in-progress: false
-      group: ci-${{ github.ref }}
+    #concurrency:
+    #  cancel-in-progress: false
+    #  group: ci-${{ github.ref }}
 
     strategy:
       matrix:
