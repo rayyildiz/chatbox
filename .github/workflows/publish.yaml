@@ -25,12 +25,12 @@ jobs:
             os: ubuntu-latest
             target: ubuntu
 
-          - build: macos-x64
-            os: macOS-14
-            target: macos-x64
+#          - build: macos-x64
+#            os: macOS-14
+#            target: macos-x64
 
           - build: macos-arm
-            os: macOS-14-arm64
+            os: macos-latest
             target: macos-arm
 
           - build: windows-msvc
