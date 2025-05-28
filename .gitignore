@@ -9,6 +9,7 @@
 .idea/**/dictionaries
 .idea/**/shelf
 .idea/
+.DS_Store
 dist/
 .cadence/
 # AWS User-specific
