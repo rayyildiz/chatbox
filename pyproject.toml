@@ -5,7 +5,7 @@ description = "Local Chatbox"
 requires-python = ">=3.12"
 dependencies = [
     "cffi>=1.17.1",
-    "environs==14.1.1",
+    "environs>=14.1.1",
     "gradio>=5.17.1",
     "openai>=1.64.0",
     "pywebview>=5.4",
