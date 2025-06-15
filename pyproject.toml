@@ -6,16 +6,15 @@ requires-python = ">=3.12"
 dependencies = [
     "cffi>=1.17.1",
     "environs>=14.1.1",
-    "gradio>=5.17.1",
-    "openai>=1.64.0",
+    "gradio>=5.34.0",
+    "openai>=1.86.0",
     "pywebview>=5.4",
     "pywin32-ctypes>=0.2.3",
 ]
 
 [dependency-groups]
 dev = [
-    "pyinstaller>=6.12.0",
-    "pywin32-ctypes>=0.2.3",
+    "pyinstaller>=6.14.1",
 ]
 
 [tool.uv]
