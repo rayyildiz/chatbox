@@ -1,13 +1,13 @@
 [project]
 name = "local-chatbox"
-version = "0.1.0"
+version = "0.1.1"
 description = "Local Chatbox"
 requires-python = ">=3.12"
 dependencies = [
     "cffi>=1.17.1",
     "environs>=14.1.1",
-    "gradio>=5.34.0",
-    "openai>=1.86.0",
+    "gradio>=5.35.0",
+    "openai>=1.93.0",
     "pywebview>=5.4",
     "pywin32-ctypes>=0.2.3",
 ]
